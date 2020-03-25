@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body p-3">
+        <h3 class="card-title">{{ 'dashboard.datasets.title' | translate }}</h3>
+        <h6 class="card-subtitle">{{ 'dashboard.datasets.subtitle' | translate }}</h6>
+        <ngb-tabset [justify]="'end'">
+          <ngb-tab title="{{ 'dashboard.datasets.tabs.masterlist' | translate }}">
+            <ng-template ngbTabContent class="p-2">
+              <div class="p-3">
+
+                <div class="form-group row" style="width: 500px; margin-bottom: 20px;">
+                  <div class="btn-group force-align-items-center ">
+                    <label class="col-form-label text-small mr-2"
+                      style="text-align: right;color: inherit !important; font-size: 12px;">{{ 'dashboard.datasets.filters.filterLabel' | translate }}</label>
+                    <select class="form-control form-control-sm custom-select mr-2" tabindex="1"
+                      [(ngModel)]="selectedFilter" style="width: auto; font-size: 12px;">
+                      <option *ngFor="let opt of filterOptions" [ngValue]="opt.prop">{{ opt.name }}</option>
+                    </select>
+                    <input type='text' class="form-control"
+                      placeholder="{{ 'dashboard.datasets.filters.filterPlaceholder' | translate }}"
+                      (keyup)='updateFilter($event)' style="width: 300px; font-size: 12px;" />
+                  </div>
+                </div>
+
+                <ngx-datatable #table class='material' [columns]="columns" [headerHeight]="50" [footerHeight]="50"
+                  [rowHeight]="50" [limit]="20" [rows]='rows' [scrollbarH]="true">
+
+                  <ng-template #confirmedDate let-rowIndex="rowIndex" let-value="value" let-row="row">
+                    {{ dateTransform(value) }}
+                  </ng-template>
+
+                  <ng-template #facility let-rowIndex="rowIndex" let-value="value" let-row="row">
+                    <a class="cursor-pointer link" (click)="focusOnMarker(row)"> {{ value }}</a>
+                  </ng-template>
+
+                </ngx-datatable>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="{{ 'dashboard.datasets.tabs.region' | translate }}">
+            <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee
+              squid.
+              <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+                farm-to-table
+                craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco
+                ad vinyl
+                cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS
+                salvia
+                yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit,
+                sustainable jean
+                shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr
+                butcher vero
+                sint qui sapiente accusamus tattooed echo park.</p>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="{{ 'dashboard.datasets.tabs.hospital' | translate }}">
+            <ng-template ngbTabContent>
+              <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla
+                facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt
+                eu, congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus
+                ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor
+                arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu
+                tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar
+                feugiat.</p>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+    </div>
+  </div>
+</div>

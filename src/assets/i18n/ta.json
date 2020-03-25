@@ -1,0 +1,708 @@
+{
+    "common": {
+        "fields": {
+            "createdOn": "Created On",
+            "createdBy": "Created By",
+            "modifiedOn": "Modified On",
+            "modifiedBy": "Modified By",
+            "deletedOn": "Deleted On",
+            "deletedBy": "Deleted By"
+        },
+        "sidebar" : {
+            "items": {
+                "dashboard": "Dashboard",
+                "philippines": "Pilipinas",
+                "administration": "Administration",
+                "customer": "Customers",
+                "clearingCenter": "Clearing Centers",
+                "branchOffice": "Branch Offices",
+                "erpSystem": "ERP Systems",
+                "outputFormat": "Output Formats",
+                "country": "Countries",
+                "transmissionType": "Transmission Types",
+                "role": "Roles",
+                "user": "Users",
+                "configuration": "Configuration",
+                "configurationStatus": "Configuration Status",
+                "configurationParameter": "Configuration Parameter",
+                "attachmentType": "Attachment Type",
+                "attachmentClassification": "Attachment Classification",
+                "attachmentIndexParameter": "Attachment Index Parameter"
+            }
+        },
+        "placeholders": {
+            "filterBy": "Filter by {{ filter }}..."
+        },
+        "labels": {
+            "datatable": {
+                "pageInfo": "{{ count }} of {{ total }} Items"
+            }
+        },
+        "actions": {
+            "cancel": "Cancel",
+            "edit": "Edit",
+            "delete": "Delete",
+            "save": "Save",
+            "add": "Add",
+            "close": "Close",
+            "viewDetails": "View Details",
+            "reset": "Reset"
+        },
+        "deleteQuestion": "Are you sure you want to delete this record?",
+        "forgotPasswordQuestion": "Forgot password?",
+        "error": {
+            "title": "Error Page!",
+            "http": {
+                "403": "You are not authorized to access this page.",
+                "404": "The page asked was not found."
+            },
+            "validation": {
+                "dontmatch": "The password and its confirmation do not match!",
+                "required": "This field is required.",
+                "regex": "Invalid format. Regex format is '/^{{ format }}$/g'.",
+                "min": "Minimum value is {{ min }}.",
+                "max": "Maximum value is {{ max }}.",
+                "ipaddress": "This is not a valid IPv4/IPv6 format.",
+                "email": "This is not a valid email format.",
+                "password": "Password must be at least {{ length }} characters."
+            }
+        }
+    },
+    "login" : {
+        "title": "",
+        "actions": {
+            "login": "Login",
+            "signIn": "Sign in",
+            "logout": "Logout",
+            "settings": "Account Settings"
+        },
+        "messages": {
+            "error": {
+                "credentials": "<strong>Failed to sign in!</strong><br>Please check your credentials and try again."
+            }
+        },
+        "fields": {
+            "username": "Username",
+            "password": "Password",
+            "rememberMe": "Remember Me"
+        }
+    },
+    "resetPassword": {
+        "title": "Reset your password",
+        "fields": {
+            "email": "Email"
+        },
+        "validation": {
+            "required": "Your email is required.",
+            "invalid": "Your email is invalid.",
+            "minlength": "The email you specified does not meet the minimum number of characters required.",
+            "maxlength": "The email you specified exceeds the character limit."
+        },
+        "error": {
+            "notFound": "<strong>Email address isn't registered!</strong><br>Please check and try again."
+        },
+        "success": "Check your emails for details on how to reset your password."
+    },
+    "newPassword": {
+        "title": "Choose new password",
+        "fields": {
+            "newpassword": "New Password",
+            "confirmpassword": "Confirm New Password"
+        },
+        "signIn": "Sign in.",
+        "validation": {
+            "newpassword": {
+                "required": "Your password is required.",
+                "minlength": "The password you specified does not meet the minimum number of characters required.",
+                "maxlength": "The password you specified exceeds the character limit."
+            },
+            "confirmpassword": {
+                "required": "Your password confirmation is required.",
+                "minlength": "The password confirmation you specified does not meet the minimum number of characters required.",
+                "maxlength": "The password confirmation you specified exceeds the character limit."
+            }
+        },
+        "error": {
+            "keymissing": "<strong>The password reset key is missing.</strong>",
+            "failed": "Failed to reset your password. Please try again later.",
+            "dontmatch": "The password does not match."
+        },
+        "success": "<strong>Your password has been reset.</strong>"
+    },
+    "customer": {
+        "title": "Customer",
+        "fields": {
+            "erpSystem": "ERP System",
+            "branchOffice": "Branch Office",
+            "branchOfficeCode": "Branch Office Code",
+            "country": "Country",
+            "transmissionType": "Transmission Type",
+            "outputFormat": "Output Format",
+            "configuration": "Configuration",
+            "customerNumber": "Customer Number",
+            "vatNumber": "VAT Number",
+            "name1": "Name1",
+            "name2": "Name2",
+            "address": "Address",
+            "zipCode": "Zip Code",
+            "city": "City",
+            "maxSizeOfAttachments": "Max Size of Attachments",
+            "emailInvoiceRecipient": "Email Invoice Recipient",
+            "emailTechIssues": "Email Tech Issues",
+            "invoicingBasedOnServiceDate": "Invoicing Based on Service Date",
+            "emailFeedback": "Email Feedback",
+            "packAttachmentsWithInvoice": "Pack Attachments with Invoice"
+        },
+        "customValues": {
+            "outOfOrder": "Out of Order",
+            "offline": "Offline",
+            "active": "Customer Activated"
+        },
+        "actions": {
+            "add": "Add Customer",
+            "history": "History"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewHistory": "View History",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "clearingCenter": {
+        "title": "Clearing Center",
+        "fields": {
+            "invoiceNumber": "Invoice Number",
+            "invoiceDate": "Invoice Date",
+            "invoiceType": "Invoice Type",
+            "customerName": "Customer Name",
+            "customerNumber": "Customer Number",
+            "name1": "Name1",
+            "name2": "Name2",
+            "address": "Address",
+            "zipCode": "Zip Code",
+            "city": "City",
+            "country": "Country",
+            "status": "Status",
+            "errorCode": "Error Code",
+            "errorMessage": "Error Message",
+            "branchOffice": "Branch Office",
+            "plannedProcessingDate": "Planned Processing Date",
+            "erpSystem": "ERP System",
+            "serviceDate": "Service Date",
+            "invoiceClass": "Invoice Class"
+        },
+        "customValues": {
+            "outOfOrder": "Out of Order",
+            "offline": "Offline",
+            "active": "Customer Activated",
+            "invoiceType": {
+                "706": "Air Freight Invoice",
+                "707": "Air Freight Credit Note",
+                "708": "Sea Freight Invoice",
+                "709": "Sea Freight Credit Note",
+                "710": "Air Freight Invoice Reversal",
+                "711": "Sea Freight Invoice Reversal",
+                "712": "Air Freight Credit Note Reversal",
+                "713": "Sea Freight Credit Note Reversal"
+            },
+            "status": {
+                "0": "A EN",
+                "1": "B EN",
+                "2": "C EN",
+                "3": "D EN",
+                "4": "E EN",
+                "5": "F EN"
+            },
+            "invoiceClass": {
+                "0": "A EN",
+                "1": "B EN",
+                "2": "C EN",
+                "3": "D EN",
+                "4": "E EN",
+                "5": "F EN"
+            },
+            "errorCode": {
+                "0": {
+                    "title": "A (EN)",
+                    "message": "A Message (EN)"
+                },
+                "1": {
+                    "title": "B (EN)",
+                    "message": "B Message (EN)"
+                },
+                "2": {
+                    "title": "C (EN)",
+                    "message": "C Message (EN)"
+                },
+                "3": {
+                    "title": "D (EN)",
+                    "message": "D Message (EN)"
+                },
+                "4": {
+                    "title": "E (EN)",
+                    "message": "E Message (EN)"
+                },
+                "5": {
+                    "title": "F (EN)",
+                    "message": "F Message (EN)"
+                }
+            }
+        },
+        "actions": {
+            "add": "Add Clearing Center",
+            "history": "History"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewHistory": "View History",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "workflowJob": {
+        "title": "Workflow Job",
+        "fields": {
+            "id": "ID",
+            "createTime": "Create Time",
+            "dueDate": "Due Date",
+            "processInstanceId": "Process Instance ID",
+            "retries": "Retries",
+            "exceptionMessage": "Exception Msg",
+            "suspended": "Suspended",
+            "priority": "Priority",
+            "tenantId": "Tenant ID"
+        }
+    },
+    "workflowProcessInstance": {
+        "title": "Workflow Process Instance",
+        "fields": {
+            "businessKey": "Business Key",
+            "caseInstanceId": "Case Instance ID",
+            "ended": "Ended",
+            "suspended": "Suspended"
+        }
+    },
+    "country": {
+        "title": "Country",
+        "fields": {
+            "name": "Name",
+            "properName": "Proper Name",
+            "abbreviation": "Abbreviation",
+            "iso3166A2": "ISO3166A2",
+            "iso3166A3": "ISO3166A3",
+            "icao": "ICAO",
+            "currencyCode": "Currency Code"
+        },
+        "customValues": {
+            "outOfOrder": "Out of Order",
+            "offline": "Offline",
+            "active": "Active"
+        },
+        "actions": {
+            "add": "Add Country"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "erpSystem": {
+        "title": "ERP System",
+        "fields": {
+            "name": "Name",
+            "display": "Display"
+        },
+        "customValues": {
+            "outOfOrder": "Out of Order",
+            "offline": "Offline",
+            "active": "Active"
+        },
+        "actions": {
+            "add": "Add ERP System"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "branchOffice": {
+        "title": "Branch Office",
+        "fields": {
+            "code": "Code",
+            "name": "Name"
+        },
+        "customValues": {
+            "outOfOrder": "Out of Order",
+            "offline": "Offline",
+            "active": "Active"
+        },
+        "actions": {
+            "add": "Add Branch Office"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "outputFormat": {
+        "title": "Output Format",
+        "fields": {
+            "name": "Name"
+        },
+        "customValues": {
+            "outOfOrder": "Out of Order",
+            "offline": "Offline",
+            "active": "Active"
+        },
+        "actions": {
+            "add": "Add Output Format"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "transmissionType": {
+        "title": "Transmission Type",
+        "fields": {
+            "name": "Name"
+        },
+        "customValues": {
+            "outOfOrder": "Out of Order",
+            "offline": "Offline",
+            "active": "Active"
+        },
+        "actions": {
+            "add": "Add Transmission Type"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "role": {
+        "title": "Role",
+        "fields": {
+            "name": "Name",
+            "admin": "Admin",
+            "restrictBranchOffice": "Restrict Branch Office",
+            "appliedToUsers": "Applied to the following users:"
+        },
+        "actions": {
+            "add": "Add Role",
+            "navigateToUsers": "Navigate to Users"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?",
+        "deleteFail": "Failed to delete role {{ name }}. Role is still in use by the following users:"
+    },
+    "user": {
+        "title": "User",
+        "fields": {
+            "username": "Username",
+            "password": "Password",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "branchOffice": "Branch Office",
+            "roles": "Roles"
+        },
+        "actions": {
+            "add": "Add User"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "configuration": {
+        "title": "Configuration",
+        "fields": {
+            "name": "Name",
+            "erpSystem": "ERP System",
+            "version": "Version",
+            "datensatzdatum": "Record Date",
+            "gueltigVon": "Valid From",
+            "gueltigBis": "Valid Until",
+            "beschreibung": "Description",
+            "username": "Username",
+            "configurationStatus": "Configuration Status",
+            "configurationParameter": "Parameters"
+        },
+        "actions": {
+            "add": "Add Configuration",
+            "addParam": "Add Parameter"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "configurationStatus": {
+        "title": "Configuration Status",
+        "fields": {
+            "name": "Name",
+            "description": "Description"
+        },
+        "actions": {
+            "add": "Add Configuration Status"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "configurationParameter": {
+        "title": "Configuration Parameter",
+        "fields": {
+            "configuration": "Configuration",
+            "minWaitTime": "Min Wait",
+            "maxWaitTime": "Max Wait",
+            "isNeededAttachment": "Is Needed",
+            "attachmentType": "Attachment Type",
+            "attachmentIndexParameter": "Attachment Index Parameter",
+            "attachmentSort": "Attachment Sort",
+            "fileNamePattern": "Filename Pattern",
+            "attachmentTitle": "Attachment Title"
+        },
+        "actions": {
+            "add": "Add Configuration Parameter"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "attachmentType": {
+        "title": "Attachment Type",
+        "fields": {
+            "creationDate": "Creation Date",
+            "arcType": "Arc Type",
+            "docType": "Doc Type",
+            "docSubType": "Doc Sub Type",
+            "docVariant": "Doc Variant",
+            "descriptionDE": "Description (DE)",
+            "descriptionEN": "Description (EN)",
+            "toDisplay": "Display",
+            "sortDisplay": "Sort Display",
+            "attachmentClassification": "Attachment Classification"
+        },
+        "actions": {
+            "add": "Add Attachment Type"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "attachmentClassification": {
+        "title": "Attachment Classification",
+        "fields": {
+            "germanName": "German Name",
+            "englishName": "English Name",
+            "description": "Description"
+        },
+        "actions": {
+            "add": "Add Attachment Classification"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "attachmentIndexParameter": {
+        "title": "Attachment Index Parameter",
+        "fields": {
+            "parameter": "Parameter",
+            "name": "Name",
+            "arctype": "Arc Type",
+            "description": "Description"
+        },
+        "actions": {
+            "add": "Add Attachment Index Parameter"
+        },
+        "selectActions": {
+            "delete": "Delete",
+            "deactivate": "Deactivate"
+        },
+        "rowActions": {
+            "edit": "Edit",
+            "delete": "Delete",
+            "viewDetails": "View Details"
+        },
+        "deleteQuestion": "Are you sure you want to delete {{ name }}?"
+    },
+    "donate": {
+      "title": "Pakanin ang mga kuting"
+    },
+    "settings": {
+      "title": "Settings",
+      "sidebarLightColor": {
+        "title": "Light Sidebar / Kulay",
+        "default": "Default",
+        "teal": "Teal",
+        "red": "Pula",
+        "blue": "Asul",
+        "purple": "Lila",
+        "green": "Berde"
+      },
+      "sidebarDarkColor": {
+        "title": "Dark Sidebar / Kulay",
+        "default": "Default Dark",
+        "teal": "Teal Dark",
+        "red": "Red Dark",
+        "blue": "Blue Dark",
+        "purple": "Purple Dark",
+        "green": "Green Dark"
+      },
+      "theme": {
+        "title": "Tema",
+        "dark": "Dark Mode ON"
+      }
+    },
+    "dashboard": {
+      "summary": {
+        "title": {
+          "common": "Buod",
+          "ph": "Buod para sa PH"
+        },
+        "asOf": "Updated as of",
+        "update": "I-update ang Lahat",
+        "confirmed": "Nakumpirma",
+        "admitted": "Admitted",
+        "deaths": "Pumanaw",
+        "recovered": "Gumaling"
+      },
+      "statistics": {
+        "title": "Istatistika",
+        "filter": {
+          "label": "# araw",
+          "days": "araw"
+        },
+        "confirmed": "Nakumpirma",
+        "deaths": "Pumanaw",
+        "recovered": "Gumaling"
+      },
+      "status": {
+        "title": "Estado",
+        "confirmed": "Nakumpirma",
+        "deaths": "Pumanaw",
+        "recovered": "Gumaling"
+      },
+      "datasets": {
+        "title": "Mga Datos",
+        "subtitle": "Ang mga tab na ito ay naglalaman ng lahat ng impormasyon sa pamamahagi ng mga kaso sa buong bansa.",
+        "tabs": {
+          "masterlist": "Masterlist",
+          "region": "Rehiyon",
+          "hospital": "Ospital"
+        },
+        "columns": {
+          "masterlist": {
+            "codename": "Codename",
+            "confirmedDate": "Nakumpirma na Petsa",
+            "age": "Edad",
+            "gender": "Kasarian",
+            "nationality": "Nasyonalidad",
+            "travelHistory": "Kasaysayan ng Paglalakbay",
+            "facility": "Pasilidad",
+            "symptoms": "Sintomas",
+            "status": "Katayuan",
+            "residence": "Paninirahan"
+          }
+        },
+        "filters": {
+          "filterLabel": "Salain ayon sa",
+          "filterPlaceholder": "I-type upang i-sala ang tinukoy na impormasyon..."
+        }
+      },
+      "map": {
+        "focusInstructions": "Mag-click sa isang pasilidad sa ibaba upang tumuon sa isang tukoy na lokasyon."
+      }
+    }
+}

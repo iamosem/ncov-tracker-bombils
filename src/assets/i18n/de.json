@@ -1,0 +1,708 @@
+{
+    "common": {
+        "fields": {
+            "createdOn": "Erstellt am",
+            "createdBy": "Erstellt von",
+            "modifiedOn": "Geändert am",
+            "modifiedBy": "Geändert von",
+            "deletedOn": "Gelöscht am",
+            "deletedBy": "Gelöscht von"
+        },
+        "sidebar" : {
+            "items": {
+                "dashboard": "Dashboard",
+                "philippines": "Philippines",
+                "administration": "Administration",
+                "customer": "Kunden",
+                "clearingCenter": "Clearing-Zentren",
+                "branchOffice": "Niederlassungen",
+                "erpSystem": "ERP Systeme",
+                "outputFormat": "Ausgabeformate",
+                "country": "Länder",
+                "transmissionType": "Übertragungsarten",
+                "role": "Rollen",
+                "user": "Benutzer",
+                "configuration": "Konfiguration",
+                "configurationStatus": "Konfigurationsstatus",
+                "configurationParameter": "Konfigurationsparameter",
+                "attachmentType": "Art des Anhangs",
+                "attachmentClassification": "Anhang Klassifizierung",
+                "attachmentIndexParameter": "Anhang Index Parameter"
+            }
+        },
+        "placeholders": {
+            "filterBy": "Filtern nach {{ filter }}..."
+        },
+        "labels": {
+            "datatable": {
+                "pageInfo": "{{ count }} von {{ total }} Elemente"
+            }
+        },
+        "actions": {
+            "cancel": "Abbrechen",
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "save": "Speichern",
+            "add": "Hinzufügen",
+            "close": "schließen",
+            "viewDetails": "Details anzeigen",
+            "reset": "Zurücksetzen"
+        },
+        "deleteQuestion": "Möchten Sie diesen Datensatz wirklich löschen?",
+        "forgotPasswordQuestion": "Passwort vergessen?",
+        "error": {
+            "title": "Error Page!",
+            "http": {
+                "403": "You are not authorized to access this page.",
+                "404": "The page asked was not found."
+            },
+            "validation": {
+                "dontmatch": "Das bestätigte Passwort entspricht nicht dem neuen Passwort!",
+                "required": "Dieses Feld wird benötigt.",
+                "regex": "Ungültiges Format. Das Regex-Format lautet '/^{{ format }}$/g'.",
+                "min": "Mindestwert ist {{ min }}.",
+                "max": "Maximalwert ist {{ max }}.",
+                "ipaddress": "Dies ist kein gültiges IPv4 / IPv6-Format.",
+                "email": "Dies ist kein gültiges E-Mail-Format.",
+                "password": "Das Passwort muss aus mindestens {{ length }} Zeichen bestehen."
+            }
+        }
+    },
+    "login" : {
+        "title": "",
+        "actions": {
+            "login": "Anmeldung",
+            "signIn": "Einloggen",
+            "logout": "Ausloggen",
+            "settings": "Konto-Einstellungen"
+        },
+        "messages": {
+            "error": {
+                "credentials": "<strong>Anmeldung fehlgeschlagen!</strong><br>Bitte überprüfen Sie Ihre Anmeldeinformationen und versuchen Sie es erneut."
+            }
+        },
+        "fields": {
+            "username": "Nutzername",
+            "password": "Passwort",
+            "rememberMe": "Erinnere dich an mich"
+        }
+    },
+    "resetPassword": {
+        "title": "Setze dein Passwort zurück",
+        "fields": {
+            "email": "Email"
+        },
+        "validation": {
+            "required": "Ihre E-Mail ist erforderlich.",
+            "invalid": "Ihre E-Mail-Adresse ist ungültig.",
+            "minlength": "Die von Ihnen angegebene E-Mail-Adresse entspricht nicht der erforderlichen Mindestanzahl von Zeichen.",
+            "maxlength": "Die angegebene E-Mail-Adresse überschreitet das Zeichenlimit."
+        },
+        "error": {
+            "notFound": "<strong>Emailadresse wurde nicht gefunden.</strong><br>Bitte überprüfen Sie und versuchen Sie es erneut."
+        },
+        "success": "Überprüfen Sie Ihre E-Mails auf Details zum Zurücksetzen Ihres Passworts."
+    },
+    "newPassword": {
+        "title": "Neues Passwort wählen",
+        "fields": {
+            "newpassword": "Neues Passwort",
+            "confirmpassword": "Bestätige neues Passwort"
+        },
+        "signIn": "Anmelden.",
+        "validation": {
+            "newpassword": {
+                "required": "Dein Passwort wird benötigt.",
+                "minlength": "Die von Ihnen angegebene Passwort entspricht nicht der erforderlichen Mindestanzahl von Zeichen.",
+                "maxlength": "Die angegebene Passwort überschreitet das Zeichenlimit."
+            },
+            "confirmpassword": {
+                "required": "Ihre Passwortbestätigung ist erforderlich.",
+                "minlength": "Die von Ihnen angegebene Kennwortbestätigung entspricht nicht der erforderlichen Mindestanzahl von Zeichen.",
+                "maxlength": "Die von Ihnen angegebene Kennwortbestätigung überschreitet das Zeichenlimit."
+            }
+        },
+        "error": {
+            "keymissing": "<strong>Der Schlüssel zum Zurücksetzen des Kennworts fehlt.</strong>",
+            "failed": "Passwort konnte nicht zurückgesetzt werden. Bitte versuchen Sie es später noch einmal.",
+            "dontmatch": "Das Passwort stimmt nicht überein."
+        },
+        "success": "<strong>Dein Passwort wurde zurück gesetzt.</strong>"
+    },
+    "customer": {
+        "title": "Kunden",
+        "fields": {
+            "erpSystem": "ERP System",
+            "branchOffice": "Zweigstelle",
+            "branchOfficeCode": "Code der Zweigstelle",
+            "country": "Land",
+            "transmissionType": "Übertragungsart",
+            "outputFormat": "Ausgabeformat",
+            "configuration": "Configuration",
+            "customerNumber": "Kundennummer",
+            "vatNumber": "USt-ID",
+            "name1": "Name1",
+            "name2": "Name2",
+            "address": "Anschrift",
+            "zipCode": "PLZ",
+            "city": "Stadt",
+            "maxSizeOfAttachments": "Maximale Größe von Anhängen",
+            "emailInvoiceRecipient": "Email Rechnungsempfänger",
+            "emailTechIssues": "Email Technische Probleme",
+            "invoicingBasedOnServiceDate": "Fakturierung nach Servicedatum",
+            "emailFeedback": "Email Feedback",
+            "packAttachmentsWithInvoice": "Packen Sie Anhänge mit Rechnung"
+        },
+        "customValues": {
+            "outOfOrder": "Inaktiv",
+            "offline": "Offline",
+            "active": "Aktiv"
+        },
+        "actions": {
+            "add": "Kunde hinzufügen",
+            "history": "Geschichte"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewHistory": "Siehe Verlauf",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "clearingCenter": {
+        "title": "Clearing-Zentren",
+        "fields": {
+            "invoiceNumber": "Rechnungsnummer",
+            "invoiceDate": "Rechnungsdatum",
+            "invoiceType": "Rechnungsart",
+            "customerName": "Kundenname",
+            "customerNumber": "Kundennummer",
+            "name1": "Name1",
+            "name2": "Name2",
+            "address": "Anschrift",
+            "zipCode": "PLZ",
+            "city": "Stadt",
+            "country": "Land",
+            "status": "Status",
+            "errorCode": "Fehlercode",
+            "errorMessage": "Fehlermeldung",
+            "branchOffice": "Zweigstelle",
+            "plannedProcessingDate": "Geplantes Bearbeitungsdatum",
+            "erpSystem": "ERP System",
+            "serviceDate": "Servicedatum",
+            "invoiceClass": "Rechnungsklasse"
+        },
+        "customValues": {
+            "outOfOrder": "Inaktiv",
+            "offline": "Offline",
+            "active": "Aktiv",
+            "invoiceType": {
+                "706": "Luftfracht-Rechnung",
+                "707": "Luftfracht-Gutschrift",
+                "708": "Seefracht Rechnung",
+                "709": "Seefrachtgutschrift",
+                "710": "Luftfracht-Rechnungsumkehr",
+                "711": "Sea Freight Invoice Reversal",
+                "712": "Luftfracht-Gutschriftumkehr",
+                "713": "Sea Freight-Gutschriftstorno"
+            },
+            "status": {
+                "0": "A DE",
+                "1": "B DE",
+                "2": "C DE",
+                "3": "D DE",
+                "4": "E DE",
+                "5": "F DE"
+            },
+            "invoiceClass": {
+                "0": "A DE",
+                "1": "B DE",
+                "2": "C DE",
+                "3": "D DE",
+                "4": "E DE",
+                "5": "F DE"
+            },
+            "errorCode": {
+                "0": {
+                    "title": "A (DE)",
+                    "message": "A Message (DE)"
+                },
+                "1": {
+                    "title": "B (DE)",
+                    "message": "B Message (DE)"
+                },
+                "2": {
+                    "title": "C (DE)",
+                    "message": "C Message (DE)"
+                },
+                "3": {
+                    "title": "D (DE)",
+                    "message": "D Message (DE)"
+                },
+                "4": {
+                    "title": "E (DE)",
+                    "message": "E Message (DE)"
+                },
+                "5": {
+                    "title": "F (DE)",
+                    "message": "F Message (DE)"
+                }
+            }
+        },
+        "actions": {
+            "add": "Clearing Center hinzufügen",
+            "history": "Geschichte"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewHistory": "Siehe Verlauf",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "workflowJob": {
+        "title": "Workflow Job",
+        "fields": {
+            "id": "ID",
+            "createTime": "Zeit schaffen",
+            "dueDate": "Geburtstermin",
+            "processInstanceId": "Prozessinstanz-ID",
+            "retries": "Wiederholungen",
+            "exceptionMessage": "Ausnahmemeldung",
+            "suspended": "Suspendiert",
+            "priority": "Priorität",
+            "tenantId": "Mieter ID"
+        }
+    },
+    "workflowProcessInstance": {
+        "title": "Workflow-Prozessinstanz",
+        "fields": {
+            "businessKey": "Geschäftsschlüssel",
+            "caseInstanceId": "Fallinstanz-ID",
+            "ended": "Beendet",
+            "suspended": "Suspendiert"
+        }
+    },
+    "country": {
+        "title": "Land",
+        "fields": {
+            "name": "Name",
+            "properName": "Eigenname",
+            "abbreviation": "Code",
+            "iso3166A2": "ISO-3166A2",
+            "iso3166A3": "ISO-3166A3",
+            "icao": "ICAO",
+            "currencyCode": "Währungscode"
+        },
+        "customValues": {
+            "outOfOrder": "Inaktiv",
+            "offline": "Offline",
+            "active": "Aktiv"
+        },
+        "actions": {
+            "add": "Land hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "erpSystem": {
+        "title": "ERP System",
+        "fields": {
+            "name": "Bezeichnung",
+            "display": "Anzeigen"
+        },
+        "customValues": {
+            "outOfOrder": "Inaktiv",
+            "offline": "Offline",
+            "active": "Aktiv"
+        },
+        "actions": {
+            "add": "ERP System hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "branchOffice": {
+        "title": "Niederlassung",
+        "fields": {
+            "code": "Code",
+            "name": "Name"
+        },
+        "customValues": {
+            "outOfOrder": "Inaktiv",
+            "offline": "Offline",
+            "active": "Aktiv"
+        },
+        "actions": {
+            "add": "Niederlassung hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{code}} wirklich dauerhaft gelöscht werden?"
+    },
+    "outputFormat": {
+        "title": "Ausgabeformat",
+        "fields": {
+            "name": "Bezeichnung"
+        },
+        "customValues": {
+            "outOfOrder": "Inaktiv",
+            "offline": "Offline",
+            "active": "Aktiv"
+        },
+        "actions": {
+            "add": "Ausgabeformat hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "transmissionType": {
+        "title": "Übertragungsart",
+        "fields": {
+            "name": "Bezeichnung"
+        },
+        "customValues": {
+            "outOfOrder": "Inaktiv",
+            "offline": "Offline",
+            "active": "Aktiv"
+        },
+        "actions": {
+            "add": "Übertragungsart hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "role": {
+        "title": "Übertragungsart",
+        "fields": {
+            "name": "Name",
+            "admin": "Admin",
+            "restrictBranchOffice": "Filiale einschränken",
+            "appliedToUsers": "Auf die folgenden Benutzer angewendet:"
+        },
+        "actions": {
+            "add": "Rolle Hinzufügen",
+            "navigateToUsers": "Navigieren Sie zu Benutzer"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?",
+        "deleteFail": "Fehler beim Löschen der Rolle {{ name }}. Die Rolle wird noch von den folgenden Benutzern verwendet:"
+    },
+    "user": {
+        "title": "Benutzer",
+        "fields": {
+            "username": "Nutzername",
+            "password": "Passwort",
+            "firstName": "Vorname",
+            "lastName": "Nachname",
+            "email": "Email",
+            "branchOffice": "Niederlassungen",
+            "roles": "Rollen"
+        },
+        "actions": {
+            "add": "Benutzer Hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "configuration": {
+        "title": "Konfiguration",
+        "fields": {
+            "name": "Name",
+            "erpSystem": "ERP System",
+            "version": "Ausführung",
+            "datensatzdatum": "Datensatz Datum",
+            "gueltigVon": "Gueltig Von",
+            "gueltigBis": "Gueltig Bis",
+            "beschreibung": "Beschreibung",
+            "username": "Nutzername",
+            "configurationStatus": "Konfigurationsstatus",
+            "configurationParameter": "Parameters"
+        },
+        "actions": {
+            "add": "Konfiguration hinzufügen",
+            "addParam": "Parameter hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "configurationStatus": {
+        "title": "Konfigurationsstatus",
+        "fields": {
+            "name": "Name",
+            "description": "Beschreibung"
+        },
+        "actions": {
+            "add": "Konfigurationsstatus hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "configurationParameter": {
+        "title": "Konfigurationsparameter",
+        "fields": {
+            "configuration": "Konfiguration",
+            "minWaitTime": "Min Wartezeit",
+            "maxWaitTime": "Max Wartezeit",
+            "isNeededAttachment": "Wird gebraucht",
+            "attachmentType": "Art des Anhangs",
+            "attachmentIndexParameter": "Anhang Index Parameter",
+            "attachmentSort": "Anhang sortieren",
+            "fileNamePattern": "Dateinamenmuster",
+            "attachmentTitle": "Titel des Anhangs"
+        },
+        "actions": {
+            "add": "Konfigurationsparameter hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "attachmentType": {
+        "title": "Art des Anhangs",
+        "fields": {
+            "creationDate": "Erstellungsdatum",
+            "arcType": "Bogentyp",
+            "docType": "Dokumenttyp",
+            "docSubType": "Doc Sub Type",
+            "docVariant": "Dokumentvariante",
+            "descriptionDE": "Beschreibung (DE)",
+            "descriptionEN": "Beschreibung (EN)",
+            "toDisplay": "Anzeige",
+            "sortDisplay": "Anzeige sortieren",
+            "attachmentClassification": "Anhang Klassifizierung"
+        },
+        "actions": {
+            "add": "Anhangstyp hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "attachmentClassification": {
+        "title": "Anhang Klassifizierung",
+        "fields": {
+            "germanName": "Deutscher Name",
+            "englishName": "Englischer Name",
+            "description": "Beschreibung"
+        },
+        "actions": {
+            "add": "Anhangsklassifizierung hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "attachmentIndexParameter": {
+        "title": "Anhang Index Parameter",
+        "fields": {
+            "parameter": "Parameter",
+            "name": "Name",
+            "arctype": "Bogentyp",
+            "description": "Beschreibung"
+        },
+        "actions": {
+            "add": "Anhangsindexparameter hinzufügen"
+        },
+        "selectActions": {
+            "delete": "Löschen",
+            "deactivate": "Deaktivieren"
+        },
+        "rowActions": {
+            "edit": "Editieren",
+            "delete": "Löschen",
+            "viewDetails": "Details anzeigen"
+        },
+        "deleteQuestion": "Soll {{name}} wirklich dauerhaft gelöscht werden?"
+    },
+    "donate": {
+      "title": "Füttere das Kätzchen"
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "sidebarLightColor": {
+        "title": "Leichte Seitenleiste / Farben",
+        "default": "Standard",
+        "teal": "Blaugrün",
+        "red": "Rot",
+        "blue": "Blau",
+        "purple": "Lila",
+        "green": "Grün"
+      },
+      "sidebarDarkColor": {
+        "title": "Dunkle Seitenleiste / Farben",
+        "default": "Standard Dunkel",
+        "teal": "Teal Dark",
+        "red": "Red Dark",
+        "blue": "Dunkelblau",
+        "purple": "Lila Dunkel",
+        "green": "Grün Dunkel"
+      },
+      "theme": {
+        "title": "Thema",
+        "dark": "Dunkler Modus EIN"
+      }
+    },
+    "dashboard": {
+      "summary": {
+        "title": {
+          "common": "Zusammenfassung",
+          "ph": "Zusammenfassung für PH"
+        },
+        "asOf": "Aktualisiert ab",
+        "update": "Alle Aktualisieren",
+        "confirmed": "Bestätigt",
+        "admitted": "Verwiriefert",
+        "deaths": "Todesfälle",
+        "recovered": "Wiederhergestellt"
+      },
+      "statistics": {
+        "title": "Statistiken",
+        "filter": {
+          "label": "# tage",
+          "days": "tage"
+        },
+        "confirmed": "Bestätigt",
+        "deaths": "Todesfälle",
+        "recovered": "Wiederhergestellt"
+      },
+      "status": {
+        "title": "Status",
+        "confirmed": "Bestätigt",
+        "deaths": "Todesfälle",
+        "recovered": "Wiederhergestellt"
+      },
+      "datasets": {
+        "title": "Datensätze",
+        "subtitle": "Diese Registerkarten enthalten alle Informationen zur Verteilung der Fälle im ganzen Land.",
+        "tabs": {
+          "masterlist": "Meisterliste",
+          "region": "Region",
+          "hospital": "Krankenhaus"
+        },
+        "columns": {
+          "masterlist": {
+            "codename": "Codename",
+            "confirmedDate": "Bestätigtes Datum",
+            "age": "Alter",
+            "gender": "Geschlecht",
+            "nationality": "Staatsangehörigkeit",
+            "travelHistory": "Reisegeschichte",
+            "facility": "Einrichtung",
+            "symptoms": "Symptome",
+            "status": "Status",
+            "residence": "Residenz"
+          }
+        },
+        "filters": {
+          "filterLabel": "Filtern nach",
+          "filterPlaceholder": "Geben Sie ein, um die angegebene Spalte zu filtern..."
+        }
+      },
+      "map": {
+        "focusInstructions": "Klicken Sie auf eine Einrichtung unten, um sich auf einen bestimmten Ort zu konzentrieren."
+      }
+    }
+}

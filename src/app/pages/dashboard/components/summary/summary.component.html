@@ -1,0 +1,65 @@
+<div class="row">
+    <!-- Column -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <h2>{{ confirmed | number }}
+                            <i class="fas" [ngClass]="{'fa-angle-up text-danger' : confirmedDiff > 0, 'fa-angle-down text-success' : confirmedDiff < 0 }"></i>
+                        </h2>
+                        <h6>{{ 'dashboard.summary.confirmed' | translate }}</h6>
+                    </div>
+                    <div class="ml-4 mr-auto">
+                        <div id="confirmedSparkline"></div>
+                    </div>
+                    <div class="floating-icon text-warning">
+                      <i class="fas fa-procedures"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <h2 class=""> {{ deaths | number }}
+                            <i class="fas" [ngClass]="{'fa-angle-up text-danger' : deathsDiff > 0, 'fa-angle-down text-success' : deathsDiff < 0 }"></i>
+                        </h2>
+                        <h6>{{ 'dashboard.summary.deaths' | translate }}</h6>
+                    </div>
+                    <div class="ml-4 mr-auto">
+                        <div id="deathsSparkline"></div>
+                    </div>
+                    <div class="floating-icon text-danger">
+                      <i class="fas fa-skull"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <h2>{{ recovered | number }}
+                            <i class="fas" [ngClass]="{'fa-angle-up text-success' : recoveredDiff > 0, 'fa-angle-down text-danger' : recoveredDiff < 0 }"></i>
+                        </h2>
+                        <h6>{{ 'dashboard.summary.recovered' | translate }}</h6>
+                    </div>
+                    <div class="ml-4 mr-auto">
+                        <div id="recoveredSparkline"></div>
+                    </div>
+                    <div class="floating-icon text-success">
+                      <i class="fas fa-briefcase-medical"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

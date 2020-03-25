@@ -1,0 +1,53 @@
+<header class="topbar">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+                <b>
+                    <img src="assets/images/ncov-logo.png" alt="Home" class="dark-logo"/>
+                    <img src="assets/images/ncov-logo.png" alt="homepage" class="light-logo" />
+                </b>
+                <span>
+                    <img src="assets/images/ncov-tracker.png" class="dark-logo"/>
+                    <img src="assets/images/ncov-tracker-dark.png" class="light-logo"/>
+                </span>
+            </a>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-md-0">
+
+                <li class="nav-item m-l-10">
+                    <a class="nav-link sidebartoggler text-muted waves-effect waves-dark" href="javascript:void(0)">
+                        <i class="ti-menu"></i>
+                    </a>
+                </li>
+
+            </ul>
+            <button type="button" class="btn btn-secondary mr-3 text-small">{{ 'donate.title' | translate }} <i class="fas fa-cat ml-2"></i></button>
+            <ul class="navbar-nav my-lg-0">
+                <li class="nav-item dropdown" ngbDropdown placement="bottom-right">
+                    <a ngbDropdownToggle class="nav-link dropdown-toggle text-muted waves-effect waves-dark"
+                       href="javascript:void(0)" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right language animated bounceInDown" ngbDropdownMenu>
+                        <ul>
+                            <li>
+                                <div class="drop-title">Language</div>
+                            </li>
+                            <li>
+                                <div class="language-list" [perfectScrollbar]="config">
+                                    <a href="javascript:void(0);" *ngFor="let lang of languages" (click)="switchLanguage(lang.code)">
+                                        <div class="content">
+                                            <span><i *ngIf="currentLanguage() == lang.code" class="fas fa-check"></i> {{ lang.label }}</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body" style="padding: 30px;">
+        <div class="row">
+          <div class="col-lg-12"></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="">
+              <i class="fa fa-map-marker fa-2x text-danger"></i>
+              <p class="text-info">{{ summaryDate | date:'longDate'}}</p>
+              <h3 style="font-weight:100;">Locations of <span class="text-bold text-big text-danger">{{ mapData ? (mapData.length | number) : 0 }}</span>
+                <br> confirmed<br>cases.</h3>
+            </div>
+            <div style="margin-top: 50px;">
+              <h6>{{ 'dashboard.map.focusInstructions' | translate }}</h6>
+            </div>
+          </div>
+          <div class="col-lg-9">
+
+            <div class="map-container">
+              <div class="map-frame">
+                <div id="map"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

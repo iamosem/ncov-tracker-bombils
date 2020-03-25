@@ -1,0 +1,188 @@
+<div id="main-wrapper" [ngClass]="
+{
+  'defaultdark': color == 'defaultdark',
+  'greendark': color == 'greendark',
+  'reddark': color == 'reddark',
+  'bluedark': color == 'bluedark',
+  'purpledark': color == 'purpledark',
+  'megnadark': color == 'megnadark',
+  'default': color == 'default',
+  'green': color == 'green',
+  'red': color == 'red',
+  'blue': color == 'blue',
+  'purple': color == 'purple',
+  'megna': color == 'megna',
+  'dark-theme': showDarktheme
+}
+">
+
+  <ncov-navigation></ncov-navigation>
+
+  <aside class="left-sidebar">
+    <div class="scroll-sidebar" [perfectScrollbar]="config">
+      <ncov-sidebar></ncov-sidebar>
+    </div>
+  </aside>
+
+  <div class="page-wrapper">
+    <div class="container-fluid" style="height: 100%;">
+      <router-outlet></router-outlet>
+
+      <button class="right-side-toggle btn-inverse btn btn-circle btn-lg" (click)="showSettings = !showSettings">
+        <i class="ti-settings text-white fa-spin"></i>
+      </button>
+      <div class="right-sidebar" [ngClass]="{'shw-rside': showSettings}">
+        <div class="slimscrollright">
+          <div class="rpanel-title"> {{ 'settings.title' | translate }}
+            <span>
+              <i class="ti-close right-side-toggle" (click)="showSettings = !showSettings"></i>
+            </span>
+          </div>
+          <div class="r-panel-body" [perfectScrollbar]="config">
+            <ul>
+              <li class="m-t-10 m-b-10">
+                <b> {{ 'settings.sidebarLightColor.title' | translate }} </b>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck11" name="radio-stacked" type="radio"
+                      value="default" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck11"> {{ 'settings.sidebarLightColor.default' | translate }} </label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck22" name="radio-stacked" type="radio"
+                      value="green" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck22"> {{ 'settings.sidebarLightColor.teal' | translate }} </label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck33" name="radio-stacked" type="radio" value="red"
+                      [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck33">{{ 'settings.sidebarLightColor.red' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck44" name="radio-stacked" type="radio"
+                      value="blue" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck44">{{ 'settings.sidebarLightColor.blue' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck55" name="radio-stacked" type="radio"
+                      value="purple" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck55">{{ 'settings.sidebarLightColor.purple' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck66" name="radio-stacked" type="radio"
+                      value="megna" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck66">{{ 'settings.sidebarLightColor.green' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <hr>
+            <ul>
+              <li class="m-b-10">
+                <b>{{ 'settings.sidebarDarkColor.title' | translate }}</b>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck77" name="radio-stacked" type="radio"
+                      value="defaultdark" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck77">{{ 'settings.sidebarDarkColor.default' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck88" name="radio-stacked" type="radio"
+                      value="greendark" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck88">{{ 'settings.sidebarDarkColor.teal' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck99" name="radio-stacked" type="radio"
+                      value="reddark" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck99">{{ 'settings.sidebarDarkColor.red' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck10" name="radio-stacked" type="radio"
+                      value="bluedark" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck10">{{ 'settings.sidebarDarkColor.blue' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck111" name="radio-stacked" type="radio"
+                      value="purpledark" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck111">{{ 'settings.sidebarDarkColor.purple' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck122" name="radio-stacked" type="radio"
+                      value="megnadark" [(ngModel)]="color" (change)="changeColor()">
+                    <label class="custom-control-label" for="customCheck122">{{ 'settings.sidebarDarkColor.green' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <hr>
+            <ul>
+              <li class="m-t-10 m-b-10">
+                <b>{{ 'settings.theme.title' | translate }}</b>
+              </li>
+              <li>
+                <div class="m-b-5">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="customCheck144" type="checkbox" [(ngModel)]="showDarktheme" (change)="toggleTheme()">
+                    <label class="custom-control-label" for="customCheck144">{{ 'settings.theme.dark' | translate }}</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © 2020 Bombils
+  </footer>
+
+</div>

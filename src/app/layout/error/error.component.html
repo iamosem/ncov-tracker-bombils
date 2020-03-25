@@ -1,0 +1,16 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-default">
+                <div class="card-body p-5">
+                    <h1 class="py-3">{{ 'common.error.title' | translate }}</h1>
+                    <div [hidden]="!errorMessage">
+                        <div class="alert alert-danger">{{ errorMessage }}</div>
+                    </div>
+                    <div [hidden]="!error403" class="alert alert-danger">{{ 'common.error.http.403' | translate }}</div>
+                    <div [hidden]="!error404" class="alert alert-danger">{{ 'common.error.http.404' | translate }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

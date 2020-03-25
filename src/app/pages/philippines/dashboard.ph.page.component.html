@@ -1,0 +1,4 @@
+<ncov-summary-ph [confirmedData]="confirmedData" [summaryData]="summaryData" (updateAllEmit)="updateAll()"></ncov-summary-ph>
+<ncov-stats-ph [summaryData]="summaryData" (updateAllEmit)="updateAll()"></ncov-stats-ph>
+<ncov-map-ph [mapData]="masterlist" [focusMarker]="focusMarker" (updateAllEmit)="updateAll()"></ncov-map-ph>
+<ncov-datasets-ph [masterlist]="masterlist" (focusOnMarkerEmit)="focusOnMarker($event)" (updateAllEmit)="updateAll()"></ncov-datasets-ph>

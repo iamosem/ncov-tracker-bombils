@@ -1,0 +1,60 @@
+<nav class="sidebar-nav">
+    <ul id="sidebarnav">
+        <ng-container *ngFor="let sidebarnavItem of sidebarnavItems">
+            <li [class.active]="showMenu === sidebarnavItem.title"
+                [routerLinkActive]="sidebarnavItem.submenu.length != 0 ? '' : 'active'">
+                <ng-container *ngIf="sidebarnavItem.isSeparator">
+                    <hr style="margin: 10px 20px;">
+                </ng-container>
+                <ng-container *ngIf="!sidebarnavItem.isSeparator">
+                    <div class="nav-small-cap" *ngIf="sidebarnavItem.extralink === true">{{ sidebarnavItem.title | translate }}</div>
+                    <a [routerLink]="sidebarnavItem.class === '' ? [sidebarnavItem.path] : null"
+                        [ngClass]="[sidebarnavItem.class]" *ngIf="!sidebarnavItem.extralink"
+                        (click)="addExpandClass(sidebarnavItem.title)">
+                        <i [ngClass]="[sidebarnavItem.icon]"></i>
+                        <span class="hide-menu">{{ sidebarnavItem.title | translate }}
+                            <span *ngIf="sidebarnavItem.label != ''"
+                                [ngClass]="[sidebarnavItem.labelClass]">{{ sidebarnavItem.label }}</span>
+                        </span>
+                    </a>
+
+                    <ul class="collapse" *ngIf="sidebarnavItem.submenu.length > 0"
+                        [ngClass]="{ in: showMenu === sidebarnavItem.title }">
+                        <ng-container *ngFor="let sidebarnavSubItem of sidebarnavItem.submenu">
+                            <li [class.active]="showSubMenu === sidebarnavSubItem.title"
+                                [routerLinkActive]="sidebarnavSubItem.submenu.length > 0 ? '' : 'active'">
+                                <ng-container *ngIf="sidebarnavSubItem.isSeparator">
+                                    <hr style="margin: 10px 20px;">
+                                </ng-container>
+                                <ng-container *ngIf="!sidebarnavSubItem.isSeparator">
+                                    <a [routerLink]="sidebarnavSubItem.submenu.length > 0 ? null : [sidebarnavSubItem.path]"
+                                        [routerLinkActive]="sidebarnavSubItem.submenu.length > 0 ? '' : 'router-link-active'"
+                                        [ngClass]="[sidebarnavSubItem.class]" *ngIf="!sidebarnavSubItem.extralink"
+                                        (click)="addActiveClass(sidebarnavSubItem.title)">
+                                        <i [ngClass]="[sidebarnavSubItem.icon]"></i>
+                                        {{ sidebarnavSubItem.title | translate }}
+                                    </a>
+
+                                    <ul class="collapse" *ngIf="sidebarnavSubItem.submenu.length > 0"
+                                        [ngClass]="{ in: showSubMenu === sidebarnavSubItem.title }">
+                                        <ng-container *ngFor="let sidebarnavSubsubItem of sidebarnavSubItem.submenu">
+                                            <li routerLinkActive="active"
+                                                [ngClass]="[sidebarnavSubsubItem.class]">
+                                                <a [routerLink]="[sidebarnavSubsubItem.path]"
+                                                    *ngIf="!sidebarnavSubsubItem.extralink"
+                                                    [routerLinkActive]="sidebarnavSubsubItem.submenu.length > 0 ? '' : 'router-link-active'">
+                                                    <i [ngClass]="[sidebarnavSubsubItem.icon]"></i>
+                                                    {{ sidebarnavSubsubItem.title | translate }}
+                                                </a>
+                                            </li>
+                                        </ng-container>
+                                    </ul>
+                                </ng-container>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </ng-container>
+            </li>
+        </ng-container>
+    </ul>
+</nav>
