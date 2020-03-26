@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { IFeatures } from 'src/app/shared/models/ph.doh.ncov.model';
+import { ParentComponent } from '../parent.component';
 
 @Component({
   selector: 'ncov-summary-ph',
   templateUrl: './summary.ph.component.html'
 })
-export class SummaryPhComponent implements OnChanges {
+export class SummaryPhComponent extends ParentComponent implements OnChanges {
   confirmed = 0;
   admitted = 0;
   deaths = 0;
@@ -21,9 +22,9 @@ export class SummaryPhComponent implements OnChanges {
   @Input() confirmedData: IFeatures[] = null;
   @Input() summaryData: IFeatures[] = null;
 
-  @Output() updateAllEmit = new EventEmitter<any>();
-
-  constructor() {}
+  constructor() {
+    super();
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     if ('confirmedData' in changes && this.confirmedData) {
@@ -81,9 +82,5 @@ export class SummaryPhComponent implements OnChanges {
       barColor: `#${color}`
     });
     return results[results.length - 1] - results[results.length - 2];
-  }
-
-  public updateAll() {
-    this.updateAllEmit.emit();
   }
 }

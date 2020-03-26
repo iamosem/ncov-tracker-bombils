@@ -4,6 +4,7 @@ import { IFeatures } from 'src/app/shared/models/ph.doh.ncov.model';
 import * as Chartist from 'chartist';
 import * as moment from 'moment';
 import { TranslateService } from '@ngx-translate/core';
+import { ParentComponent } from '../parent.component';
 
 export interface Chart {
   type: ChartType;
@@ -17,7 +18,7 @@ export interface Chart {
   selector: 'ncov-stats-ph',
   templateUrl: './stats.ph.component.html'
 })
-export class StatsPhComponent implements OnChanges {
+export class StatsPhComponent extends ParentComponent implements OnChanges {
 
   lineChartData: Array<any> = [];
   lineChartLabels: Array<any> = [];
@@ -86,9 +87,8 @@ export class StatsPhComponent implements OnChanges {
 
   @Input() summaryData: IFeatures[] = null;
 
-  @Output() updateAllEmit = new EventEmitter<any>();
-
   constructor(private translateService: TranslateService) {
+    super();
     this.statusChart.data.series = null;
   }
 
@@ -150,9 +150,5 @@ export class StatsPhComponent implements OnChanges {
         }
       ];
     });
-  }
-
-  public updateAll() {
-    this.updateAllEmit.emit();
   }
 }

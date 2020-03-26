@@ -1,4 +1,17 @@
-<ncov-summary-ph [confirmedData]="confirmedData" [summaryData]="summaryData" (updateAllEmit)="updateAll()"></ncov-summary-ph>
-<ncov-stats-ph [summaryData]="summaryData" (updateAllEmit)="updateAll()"></ncov-stats-ph>
-<ncov-map-ph [mapData]="masterlist" [focusMarker]="focusMarker" (updateAllEmit)="updateAll()"></ncov-map-ph>
-<ncov-datasets-ph [masterlist]="masterlist" (focusOnMarkerEmit)="focusOnMarker($event)" (updateAllEmit)="updateAll()"></ncov-datasets-ph>
+<div #summary>
+    <ncov-summary-ph #summary [confirmedData]="confirmedData" [summaryData]="summaryData" (updateAllEmit)="updateAll()"
+        (scrollViewToPanelEmit)="scrollViewToPanel($event)">
+    </ncov-summary-ph>
+</div>
+<div #stats>
+    <ncov-stats-ph [summaryData]="summaryData" (updateAllEmit)="updateAll()"
+        (scrollViewToPanelEmit)="scrollViewToPanel($event)"></ncov-stats-ph>
+</div>
+<div #map>
+    <ncov-map-ph [mapData]="masterlist" [focusMarker]="focusMarker" (updateAllEmit)="updateAll()"
+        (scrollViewToPanelEmit)="scrollViewToPanel($event)"></ncov-map-ph>
+</div>
+<div #datasets>
+    <ncov-datasets-ph #datasets [masterlist]="masterlist" (focusOnMarkerEmit)="focusOnMarker($event)"
+        (updateAllEmit)="updateAll()" (scrollViewToPanelEmit)="scrollViewToPanel($event)"></ncov-datasets-ph>
+</div>

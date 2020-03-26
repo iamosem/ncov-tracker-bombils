@@ -14,6 +14,7 @@ import { StatsPhComponent } from './philippines/components/stats/stats.ph.compon
 import { SummaryPhComponent } from './philippines/components/summary/summary.ph.component';
 import { DashboardPhPageComponent } from './philippines/dashboard.ph.page.component';
 import { MapPhComponent } from './philippines/components/map/map.ph.component';
+import { NgxLeafletFullscreenModule } from '@runette/ngx-leaflet-fullscreen';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { MapPhComponent } from './philippines/components/map/map.ph.component';
     ChartistModule,
     NgxDatatableModule,
     Ng2SmartTableModule,
+    NgxLeafletFullscreenModule
   ],
   declarations: [
     SummaryComponent,
