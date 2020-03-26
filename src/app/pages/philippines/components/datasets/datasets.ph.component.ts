@@ -72,9 +72,9 @@ export class DatasetsPhComponent implements OnChanges {
 
     this.columns = [
       { prop: 'PH_masterl', name: this.translateService.instant('dashboard.datasets.columns.masterlist.codename'), resizeable: true, width: 100, frozenLeft: true },
-      { prop: 'confirmed', name: this.translateService.instant('dashboard.datasets.columns.masterlist.confirmedDate'), cellTemplate: this.confirmedDateTemplate, resizeable: true, width: 150, frozenLeft: true },
-      { prop: 'edad', name: this.translateService.instant('dashboard.datasets.columns.masterlist.age'), resizeable: true, width: 80, frozenLeft: true },
-      { prop: 'kasarian', name: this.translateService.instant('dashboard.datasets.columns.masterlist.gender'), resizeable: true, width: 100, frozenLeft: true },
+      { prop: 'confirmed', name: this.translateService.instant('dashboard.datasets.columns.masterlist.confirmedDate'), cellTemplate: this.confirmedDateTemplate, resizeable: true, width: 150 },
+      { prop: 'edad', name: this.translateService.instant('dashboard.datasets.columns.masterlist.age'), resizeable: true, width: 80 },
+      { prop: 'kasarian', name: this.translateService.instant('dashboard.datasets.columns.masterlist.gender'), resizeable: true, width: 100 },
       { prop: 'nationalit', name: this.translateService.instant('dashboard.datasets.columns.masterlist.nationality'), resizeable: true, width: 150 },
       { prop: 'travel_hx', name: this.translateService.instant('dashboard.datasets.columns.masterlist.travelHistory'), resizeable: true, width: 200 },
       { prop: 'facility', name: this.translateService.instant('dashboard.datasets.columns.masterlist.facility'), cellTemplate: this.facilityTemplate, resizeable: true, width: 500 },

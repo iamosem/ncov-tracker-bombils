@@ -6,7 +6,8 @@ import {
   MAPS_TILE_LAYER_OPENSTREETMAP_URL,
   MAPS_TILE_LAYER_OPENSTREETMAP_ATTR,
   MAPS_PH_CENTER_COOR,
-  MAPS_PH_MIN_ZOOM_LEVEL
+  MAPS_PH_MIN_ZOOM_LEVEL,
+  MAPS_PH_FOCUS_ZOOM_LEVEL
 } from 'src/app/app.constants';
 import { DatePipe } from '@angular/common';
 
@@ -170,6 +171,8 @@ export class MapPhComponent implements OnChanges, AfterViewInit {
   public centerOnMarker(lnglat) {
     const markerBounds = L.latLngBounds([lnglat]);
     this.map.fitBounds(markerBounds);
+
+    this.map.setView(lnglat, MAPS_PH_FOCUS_ZOOM_LEVEL);
   }
 
   public recenterMap() {
