@@ -172,4 +172,8 @@ export class MapPhComponent implements OnChanges, AfterViewInit {
     this.map.fitBounds(markerBounds);
   }
 
+  public recenterMap() {
+    this.map.setView(MAPS_PH_CENTER_COOR, MAPS_PH_MIN_ZOOM_LEVEL);
+  }
+
 }

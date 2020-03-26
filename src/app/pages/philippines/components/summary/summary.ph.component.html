@@ -10,9 +10,9 @@
             </span>
           </div>
           <div class="col-4" style="text-align: right;">
-            <button (click)="updateAll()" style="font-size: 0.9em;position: absolute;right: 0;top: -6px;" type="button"
+            <button (click)="updateAll()" style="font-size: 0.9em;position: absolute;right: 0;top: -6px; max-width: 100%;" type="button"
               class="btn btn-rounded btn-primary"><i
-                class="fas fa-download mr-2"></i>{{ 'dashboard.summary.update' | translate }}</button>
+                class="fas fa-download"></i><span class="hidden-sm-down ml-2">{{ 'dashboard.summary.update' | translate }}</span></button>
           </div>
         </div>
       </div>
