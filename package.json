@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +31,7 @@
     "chart.js": "2.7.1",
     "chartist": "0.11.0",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
     "jquery": "3.2.1",
     "leaflet": "^1.6.0",
     "moment": "2.24.0",
@@ -45,6 +47,7 @@
     "ngx-toastr": "8.7.3",
     "ngx-webstorage": "3.0.2",
     "pace-js": "1.0.2",
+    "path": "^0.12.7",
     "popper.js": "1.12.5",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.0.0-rc.0",

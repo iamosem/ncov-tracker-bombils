@@ -3,9 +3,6 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { createRequestOption } from '../utils/request.utils';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class HttpService<T> {
   private _api: string;
   private _url: string;

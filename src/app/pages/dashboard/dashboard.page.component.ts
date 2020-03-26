@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import * as moment from 'moment';
 import * as Chartist from 'chartist';
-import * as tableData from './smart-data-table';
-import { LocalDataSource } from 'ng2-smart-table';
 import { ChartEvent, ChartType } from 'ng-chartist';
 import { HerokuSourceService } from 'src/app/shared/api/heroku.source.service';
 import { IHerokuNcov } from 'src/app/shared/models/heroku.ncov.model';
@@ -23,12 +21,6 @@ export interface Chart {
   styleUrls: ['./dashboard.page.component.scss']
 })
 export class DashboardPageComponent {
-  settings2 = tableData.settings;
-  source: LocalDataSource;
-  subtitle: string;
-
-  // This is for the dashboar line chart
-  // lineChart
   public lineChartData: Array<any> = [
     { data: [50, 130, 80, 70, 180, 105, 250], label: 'Confirmed' },
     { data: [80, 100, 60, 200, 150, 100, 150], label: 'Deaths' },
@@ -118,9 +110,6 @@ export class DashboardPageComponent {
   data: IHerokuNcov = null;
 
   constructor(private service: HerokuSourceService) {
-    this.subtitle = 'This is some text within a card block.';
-    this.source = new LocalDataSource(tableData.data);
-
     this.statusChart.data.series = null;
 
     this.data = this.getHerokuNcovDataCache();
