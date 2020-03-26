@@ -1,17 +1,24 @@
 .map-container {
   position: relative;
-  margin: 30px;
 }
 
 .map-frame {
   border-radius: 5px;
   height: 500px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
 }
 
 #map {
   height: 100%;
   border-radius: 5px;
+}
+
+.recenter-button {
+  font-size: 0.8em;
+  position: relative;
+  top: 100px;
+  padding: 5px 8px;
+  left: 9px;
 }

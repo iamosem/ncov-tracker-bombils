@@ -898,3 +898,17 @@ h1 {
 .ensure-top-level {
   z-index: 99999;
 }
+
+@media (max-width: 575px) {
+  .ptm-md-2, .pym-md-2 {
+    padding-top: 0.5rem !important;
+  }
+
+  .plm-md-0, .pxm-md-0 {
+    padding-left: 0 !important;
+  }
+
+  .prm-md-0, .pxm-md-0 {
+    padding-right: 0 !important;
+  }
+}
