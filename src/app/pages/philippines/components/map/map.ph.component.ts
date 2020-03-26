@@ -7,7 +7,9 @@ import {
   MAPS_TILE_LAYER_OPENSTREETMAP_ATTR,
   MAPS_PH_CENTER_COOR,
   MAPS_PH_MIN_ZOOM_LEVEL,
-  MAPS_PH_FOCUS_ZOOM_LEVEL
+  MAPS_PH_FOCUS_ZOOM_LEVEL,
+  MAPS_TILE_LAYER_CARTOCDN_LIGHT_URL,
+  MAPS_TILE_LAYER_CARTOCDN_LIGHT_ATTR
 } from 'src/app/app.constants';
 import { DatePipe } from '@angular/common';
 import { ParentComponent } from '../parent.component';
@@ -42,6 +44,22 @@ export class MapPhComponent extends ParentComponent implements OnChanges, AfterV
     iconUrl: 'assets/images/red-marker.png'
   });
 
+  private resetViewControl = L.Control.extend({
+    onAdd: (map) => {
+      const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom cursor-pointer');
+      container.innerHTML = `<i class="fa fa-location-arrow"></i>`;
+      container.title = 'Reset Zoom Level';
+      container.style.fontSize = '0.8em';
+      container.style.padding = '5px 8px';
+      container.style.backgroundColor = '#fff';
+      container.onclick = () => {
+        this.recenterMap();
+      };
+      return container;
+    },
+    onRemove: (map) => {}
+  });
+
   summaryDate = null;
 
   constructor(
@@ -68,7 +86,8 @@ export class MapPhComponent extends ParentComponent implements OnChanges, AfterV
 
   initMap(): void {
     this.map = L.map('map', { center: MAPS_PH_CENTER_COOR, zoom: MAPS_PH_MIN_ZOOM_LEVEL, minZoom: MAPS_PH_MIN_ZOOM_LEVEL });
-    L.tileLayer(MAPS_TILE_LAYER_OPENSTREETMAP_URL, { maxZoom: 19, attribution: MAPS_TILE_LAYER_OPENSTREETMAP_ATTR }).addTo(this.map);
+    L.tileLayer(MAPS_TILE_LAYER_CARTOCDN_LIGHT_URL, { maxZoom: 19, attribution: MAPS_TILE_LAYER_CARTOCDN_LIGHT_ATTR }).addTo(this.map);
+    (new this.resetViewControl({ position: 'topleft' })).addTo(this.map);
   }
 
   private plotMapData() {
