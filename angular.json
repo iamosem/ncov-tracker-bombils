@@ -34,7 +34,8 @@
             "styles": [
               "src/styles.scss",
               "node_modules/chartist/dist/chartist.css",
-              "src/assets/scss/style.scss"
+              "src/assets/scss/style.scss",
+              "node_modules/@runette/leaflet-fullscreen/dist/leaflet.fullscreen.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

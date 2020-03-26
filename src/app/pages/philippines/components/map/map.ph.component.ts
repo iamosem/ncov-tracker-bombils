@@ -30,7 +30,7 @@ export class MapPhComponent implements OnChanges, AfterViewInit {
 
   @Output() updateAllEmit = new EventEmitter<any>();
 
-  private map;
+  map = null;
 
   private maleIcon = new L.Icon.Default({
     iconRetinaUrl: 'assets/images/blue-marker-2x.png',
@@ -62,7 +62,7 @@ export class MapPhComponent implements OnChanges, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.initMap();
+    setTimeout(() => this.initMap());
   }
 
   initMap(): void {

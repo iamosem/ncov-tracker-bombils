@@ -10,7 +10,8 @@
             <div class="">
               <i class="fa fa-map-marker fa-2x text-danger"></i>
               <p class="text-info">{{ summaryDate | date:'longDate'}}</p>
-              <h3 style="font-weight:100;">Locations of <span class="text-bold text-big text-danger">{{ mapData ? (mapData.length | number) : 0 }}</span>
+              <h3 style="font-weight:100;">Locations of <span
+                  class="text-bold text-big text-danger">{{ mapData ? (mapData.length | number) : 0 }}</span>
                 <br> confirmed<br>cases.</h3>
             </div>
             <div style="margin-top: 50px;">
@@ -18,12 +19,12 @@
             </div>
           </div>
           <div class="col-lg-9">
-
             <div class="map-container">
               <div class="map-frame">
                 <div id="map"></div>
               </div>
             </div>
+            <leaflet-fullscreen-control [map]="map" [options]="{ position: 'topleft' }"></leaflet-fullscreen-control>
           </div>
         </div>
       </div>

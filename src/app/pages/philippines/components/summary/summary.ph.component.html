@@ -21,14 +21,15 @@
 </div>
 
 <div class="row">
-  <div class="col-7">
+  <div class="col-12">
     <div class="card">
       <div class="card-body p-5">
         <div class="d-flex align-items-center">
           <div>
             <h1 class="text-danger" style="font-size: 3em;">{{ confirmed | number }}</h1>
             <h6>{{ 'dashboard.summary.confirmed' | translate }}</h6>
-            <small class="text-small">{{ 'dashboard.summary.asOf' | translate }} {{ summaryDateEnd | date:'full'}}</small>
+            <small class="text-small">{{ 'dashboard.summary.asOf' | translate }}
+              {{ summaryDateEnd | date:'full'}}</small>
           </div>
           <div class="floating-icon text-danger" style="font-size: 10em; bottom: -50px;">
             <i class="fas fa-users"></i>
