@@ -5,6 +5,7 @@ import * as Chartist from 'chartist';
 import * as moment from 'moment';
 import { TranslateService } from '@ngx-translate/core';
 import { DatePipe } from '@angular/common';
+import { ParentComponent } from '../parent.component';
 
 declare var require: any;
 const data: any = require('./company.json');
@@ -22,7 +23,7 @@ export interface Chart {
   templateUrl: './datasets.ph.component.html',
   providers: [DatePipe]
 })
-export class DatasetsPhComponent implements OnChanges {
+export class DatasetsPhComponent extends ParentComponent implements OnChanges {
   @ViewChild(DatasetsPhComponent) table: DatasetsPhComponent;
 
   @ViewChild('confirmedDate') public confirmedDateTemplate: TemplateRef<any>;
@@ -35,7 +36,6 @@ export class DatasetsPhComponent implements OnChanges {
   @Input() masterlist: IFeatures[] = null;
 
   @Output() focusOnMarkerEmit = new EventEmitter<any>();
-  @Output() updateAllEmit = new EventEmitter<any>();
 
   filterOptions = [];
   selectedFilter = 'PH_masterl';
@@ -44,6 +44,8 @@ export class DatasetsPhComponent implements OnChanges {
     private translateService: TranslateService,
     private datePipe: DatePipe
   ) {
+    super();
+
     this.rows = data;
     this.temp = [...data];
   }
@@ -53,10 +55,6 @@ export class DatasetsPhComponent implements OnChanges {
       this.initializeMasterlistColumns();
       this.initializeMasterlist();
     }
-  }
-
-  public updateAll() {
-    this.updateAllEmit.emit();
   }
 
   private initializeMasterlistColumns() {
@@ -123,5 +121,6 @@ export class DatasetsPhComponent implements OnChanges {
 
   public focusOnMarker(row: any) {
     this.focusOnMarkerEmit.emit({ lng: row.lng, lat: row.lat });
+    this.scrollViewToPanelEmit.emit('map');
   }
 }

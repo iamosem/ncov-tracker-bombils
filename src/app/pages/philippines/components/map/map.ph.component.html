@@ -15,7 +15,7 @@
                 <br> confirmed<br>cases.</h3>
             </div>
             <div style="margin-top: 50px;">
-              <h6>{{ 'dashboard.map.focusInstructions' | translate }}</h6>
+              <h6 class="cursor-pointer text-info" (click)="scrollViewToPanelEmit.emit('datasets')">{{ 'dashboard.map.focusInstructions' | translate }}</h6>
             </div>
           </div>
           <div class="col-lg-9">

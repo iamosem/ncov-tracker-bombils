@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { PhDohSourceService } from 'src/app/shared/api/ph.doh.source.service';
 import { IFeatures } from 'src/app/shared/models/ph.doh.ncov.model';
 
@@ -9,6 +9,11 @@ import { IFeatures } from 'src/app/shared/models/ph.doh.ncov.model';
   styleUrls: ['./dashboard.ph.page.component.scss']
 })
 export class DashboardPhPageComponent {
+
+  @ViewChild('summary') summary: ElementRef;
+  @ViewChild('stats') stats: ElementRef;
+  @ViewChild('map') map: ElementRef;
+  @ViewChild('datasets') datasets: ElementRef;
 
   confirmedData: IFeatures[] = null;
   summaryData: IFeatures[] = null;
@@ -68,5 +73,22 @@ export class DashboardPhPageComponent {
 
   private onError(errorMessage: string) {
     console.log('@@@ ERROR: ' + errorMessage);
+  }
+
+  public scrollViewToPanel(panelName: string) {
+    switch (panelName.toLowerCase()) {
+      case 'summary':
+        this.summary.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        break;
+      case 'stats':
+        this.stats.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        break;
+      case 'map':
+        this.map.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        break;
+      case 'datasets':
+        this.datasets.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        break;
+    }
   }
 }

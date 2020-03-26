@@ -25,7 +25,7 @@
     <div class="card">
       <div class="card-body p-5">
         <div class="d-flex align-items-center">
-          <div>
+          <div class="cursor-pointer" (click)="scrollViewToPanelEmit.emit('map')">
             <h1 class="text-danger" style="font-size: 3em;">{{ confirmed | number }}</h1>
             <h6>{{ 'dashboard.summary.confirmed' | translate }}</h6>
             <small class="text-small">{{ 'dashboard.summary.asOf' | translate }}

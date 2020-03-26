@@ -10,6 +10,7 @@ import {
   MAPS_PH_FOCUS_ZOOM_LEVEL
 } from 'src/app/app.constants';
 import { DatePipe } from '@angular/common';
+import { ParentComponent } from '../parent.component';
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -24,12 +25,10 @@ L.Icon.Default.mergeOptions({
   styleUrls: ['./map.ph.component.scss'],
   providers: [DatePipe]
 })
-export class MapPhComponent implements OnChanges, AfterViewInit {
+export class MapPhComponent extends ParentComponent implements OnChanges, AfterViewInit {
 
   @Input() mapData: IFeatures[] = null;
   @Input() focusMarker = null;
-
-  @Output() updateAllEmit = new EventEmitter<any>();
 
   map = null;
 
@@ -49,6 +48,7 @@ export class MapPhComponent implements OnChanges, AfterViewInit {
     private translateService: TranslateService,
     private datePipe: DatePipe
   ) {
+    super();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -154,10 +154,6 @@ export class MapPhComponent implements OnChanges, AfterViewInit {
       return value;
     }
     return this.datePipe.transform(value, 'MMM d, y');
-  }
-
-  public updateAll() {
-    this.updateAllEmit.emit();
   }
 
   public formatIfEmpty(value: string) {

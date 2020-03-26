@@ -17,12 +17,12 @@
                         <label class="col-form-label text-small mr-2"
                           style="text-align: right;color: inherit !important; font-size: 12px;">{{ 'dashboard.datasets.filters.filterLabel' | translate }}</label>
                         <select class="form-control form-control-sm custom-select mr-2" tabindex="1"
-                          [(ngModel)]="selectedFilter" style="width: auto; font-size: 12px;">
+                          [(ngModel)]="selectedFilter" (change)="filterValue.select()" style="width: auto; font-size: 12px;">
                           <option *ngFor="let opt of filterOptions" [ngValue]="opt.prop">{{ opt.name }}</option>
                         </select>
                       </div>
                       <div class="col-md-6 ptm-md-2 pxm-md-0">
-                        <input type='text' class="form-control"
+                        <input #filterValue type='text' class="form-control"
                           placeholder="{{ 'dashboard.datasets.filters.filterPlaceholder' | translate }}"
                           (keyup)='updateFilter($event)' style="width: auto; font-size: 12px;" />
                       </div>
