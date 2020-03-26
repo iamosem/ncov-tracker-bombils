@@ -1,0 +1,7 @@
+.timeline-panel {
+    background-color: rgba(0,0,0,0.06);
+    &:after {
+        border-right-color: rgba(0,0,0,0.01) !important;
+        border-left-color: rgba(0,0,0,0.01) !important;
+    }
+}

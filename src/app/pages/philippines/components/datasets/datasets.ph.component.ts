@@ -38,7 +38,7 @@ export class DatasetsPhComponent extends ParentComponent implements OnChanges {
   @Output() focusOnMarkerEmit = new EventEmitter<any>();
 
   filterOptions = [];
-  selectedFilter = 'PH_masterl';
+  selectedFilter = 'facility';
 
   constructor(
     private translateService: TranslateService,

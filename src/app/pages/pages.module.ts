@@ -15,6 +15,7 @@ import { SummaryPhComponent } from './philippines/components/summary/summary.ph.
 import { DashboardPhPageComponent } from './philippines/dashboard.ph.page.component';
 import { MapPhComponent } from './philippines/components/map/map.ph.component';
 import { NgxLeafletFullscreenModule } from '@runette/ngx-leaflet-fullscreen';
+import { AboutUsPageComponent } from './static/about.us.page.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { NgxLeafletFullscreenModule } from '@runette/ngx-leaflet-fullscreen';
     StatsPhComponent,
     DatasetsPhComponent,
     MapPhComponent,
-    DashboardPhPageComponent
+    DashboardPhPageComponent,
+    AboutUsPageComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
