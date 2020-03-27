@@ -653,6 +653,9 @@
         },
         "asOf": "更新時間",
         "update": "すべて更新",
+        "gotoStats": "統計",
+        "gotoMap": "地図",
+        "gotoDatasets": "データセット",
         "confirmed": "確認済み",
         "admitted": "入院します",
         "deaths": "死者",
@@ -665,12 +668,14 @@
           "days": "日"
         },
         "confirmed": "確認済み",
+        "admitted": "入院します",
         "deaths": "死者",
         "recovered": "回復した"
       },
       "status": {
         "title": "状態",
         "confirmed": "確認済み",
+        "admitted": "入院します",
         "deaths": "死者",
         "recovered": "回復した"
       },

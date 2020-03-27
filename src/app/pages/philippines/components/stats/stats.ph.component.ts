@@ -81,7 +81,7 @@ export class StatsPhComponent extends ParentComponent implements OnChanges {
     options: { donut: true, showLabel: false, donutWidth: 40 }
   };
 
-  confirmed = 0;
+  admitted = 0;
   deaths = 0;
   recovered = 0;
 
@@ -103,13 +103,13 @@ export class StatsPhComponent extends ParentComponent implements OnChanges {
     setTimeout(() => {
       const latest = this.summaryData[this.summaryData.length - 1];
 
-      this.confirmed = latest.attributes.admitted;
+      this.admitted = latest.attributes.admitted;
       this.deaths = latest.attributes.deaths;
       this.recovered = latest.attributes.recovered;
 
       this.statusChart.data.series = [
         {
-          value: this.confirmed,
+          value: this.admitted,
           className: 'stroke-warning'
         },
         {
@@ -138,7 +138,7 @@ export class StatsPhComponent extends ParentComponent implements OnChanges {
       this.lineChartData = [
         {
           data: [ ...slicedData.map(d => d.attributes.admitted) ],
-          label: this.translateService.instant('dashboard.statistics.confirmed')
+          label: this.translateService.instant('dashboard.statistics.admitted')
         },
         {
           data: [ ...slicedData.map(d => d.attributes.deaths) ],

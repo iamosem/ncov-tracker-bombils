@@ -114,6 +114,9 @@ export class DatasetsPhComponent extends ParentComponent implements OnChanges {
   public dateTransform(value) {
     const parsedDate = Date.parse(value);
     if (isNaN(parsedDate)) {
+      if (!value || value.trim() === '') {
+        value = '-';
+      }
       return value;
     }
     return this.datePipe.transform(value, 'MMM d, y');
