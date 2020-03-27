@@ -649,10 +649,13 @@
       "summary": {
         "title": {
           "common": "Summary",
-          "ph": "Summary for PH"
+          "ph": "Summary for Philippines"
         },
         "asOf": "Updated as of",
         "update": "Update All",
+        "gotoStats": "Stats",
+        "gotoMap": "Map",
+        "gotoDatasets": "Datasets",
         "confirmed": "Confirmed",
         "admitted": "Admitted",
         "deaths": "Deaths",
@@ -665,12 +668,14 @@
           "days": "days"
         },
         "confirmed": "Confirmed",
+        "admitted": "Admitted",
         "deaths": "Deaths",
         "recovered": "Recovered"
       },
       "status": {
         "title": "Status",
         "confirmed": "Confirmed",
+        "admitted": "Admitted",
         "deaths": "Deaths",
         "recovered": "Recovered"
       },

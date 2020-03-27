@@ -649,10 +649,13 @@
       "summary": {
         "title": {
           "common": "Zusammenfassung",
-          "ph": "Zusammenfassung für PH"
+          "ph": "Zusammenfassung für Philippines"
         },
         "asOf": "Aktualisiert ab",
         "update": "Alle Aktualisieren",
+        "gotoStats": "Statistiken",
+        "gotoMap": "Karte",
+        "gotoDatasets": "Datensätze",
         "confirmed": "Bestätigt",
         "admitted": "Verwiriefert",
         "deaths": "Todesfälle",
@@ -665,12 +668,14 @@
           "days": "tage"
         },
         "confirmed": "Bestätigt",
+        "admitted": "Verwiriefert",
         "deaths": "Todesfälle",
         "recovered": "Wiederhergestellt"
       },
       "status": {
         "title": "Status",
         "confirmed": "Bestätigt",
+        "admitted": "Verwiriefert",
         "deaths": "Todesfälle",
         "recovered": "Wiederhergestellt"
       },

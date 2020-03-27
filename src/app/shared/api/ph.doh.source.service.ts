@@ -31,7 +31,7 @@ export class PhDohSourceService extends HttpService<IPhDohNCov> {
 
   getMasterlist(): Observable<HttpResponse<IPhDohNCov>> {
     return this._http.get<IPhDohNCov>(
-      `${this.resourceUrl}PH_masterlist/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=FID%20desc&outSR=102100&resultOffset=0&cacheHint=true`,
+      `${this.resourceUrl}PH_masterlist/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=sequ%20desc&outSR=102100&resultOffset=0&cacheHint=true`,
       { observe: 'response' }
     );
   }
