@@ -659,7 +659,10 @@
         "confirmed": "確認済み",
         "admitted": "入院します",
         "deaths": "死者",
-        "recovered": "回復した"
+        "recovered": "回復した",
+        "testing": "テスト中",
+        "pum": "PUM",
+        "pui": "PUI"
       },
       "statistics": {
         "title": "統計",

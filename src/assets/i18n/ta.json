@@ -659,7 +659,10 @@
         "confirmed": "Nakumpirma",
         "admitted": "Admitted",
         "deaths": "Pumanaw",
-        "recovered": "Gumaling"
+        "recovered": "Gumaling",
+        "testing": "Tinetest",
+        "pum": "PUM",
+        "pui": "PUI"
       },
       "statistics": {
         "title": "Istatistika",
