@@ -29,6 +29,27 @@ export class PhDohSourceService extends HttpService<IPhDohNCov> {
     );
   }
 
+  getOnTesting(): Observable<HttpResponse<IPhDohNCov>> {
+    return this._http.get<IPhDohNCov>(
+      `${this.resourceUrl}slide_fig/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22tests%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&outSR=102100&cacheHint=true`,
+      { observe: 'response' }
+    );
+  }
+
+  getPum(): Observable<HttpResponse<IPhDohNCov>> {
+    return this._http.get<IPhDohNCov>(
+      `${this.resourceUrl}slide_fig/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22PUMs%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&outSR=102100&cacheHint=true`,
+      { observe: 'response' }
+    );
+  }
+
+  getPui(): Observable<HttpResponse<IPhDohNCov>> {
+    return this._http.get<IPhDohNCov>(
+      `${this.resourceUrl}slide_fig/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22PUIs%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&outSR=102100&cacheHint=true`,
+      { observe: 'response' }
+    );
+  }
+
   getMasterlist(): Observable<HttpResponse<IPhDohNCov>> {
     return this._http.get<IPhDohNCov>(
       `${this.resourceUrl}PH_masterlist/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=sequ%20desc&outSR=102100&resultOffset=0&cacheHint=true`,

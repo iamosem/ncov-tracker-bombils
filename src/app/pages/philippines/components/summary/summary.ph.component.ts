@@ -21,6 +21,9 @@ export class SummaryPhComponent extends ParentComponent implements OnChanges {
 
   @Input() confirmedData: IFeatures[] = null;
   @Input() summaryData: IFeatures[] = null;
+  @Input() testing = 0;
+  @Input() pum = 0;
+  @Input() pui = 0;
 
   constructor() {
     super();

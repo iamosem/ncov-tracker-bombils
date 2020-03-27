@@ -1,6 +1,6 @@
 <div #summary>
-    <ncov-summary-ph #summary [confirmedData]="confirmedData" [summaryData]="summaryData" (updateAllEmit)="updateAll()"
-        (scrollViewToPanelEmit)="scrollViewToPanel($event)">
+    <ncov-summary-ph #summary [confirmedData]="confirmedData" [summaryData]="summaryData" [testing]="testing"
+        [pum]="pum" [pui]="pui" (updateAllEmit)="updateAll()" (scrollViewToPanelEmit)="scrollViewToPanel($event)">
     </ncov-summary-ph>
 </div>
 <div #stats>
@@ -8,8 +8,8 @@
         (scrollViewToPanelEmit)="scrollViewToPanel($event)"></ncov-stats-ph>
 </div>
 <div #map>
-    <ncov-map-ph [mapData]="masterlist" [residenceData]="residenceData" [focusMarker]="focusMarker" (updateAllEmit)="updateAll()"
-        (scrollViewToPanelEmit)="scrollViewToPanel($event)"></ncov-map-ph>
+    <ncov-map-ph [mapData]="masterlist" [residenceData]="residenceData" [focusMarker]="focusMarker"
+        (updateAllEmit)="updateAll()" (scrollViewToPanelEmit)="scrollViewToPanel($event)"></ncov-map-ph>
 </div>
 <div #datasets>
     <ncov-datasets-ph #datasets [masterlist]="masterlist" (focusOnMarkerEmit)="focusOnMarker($event)"
