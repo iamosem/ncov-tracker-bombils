@@ -6,19 +6,44 @@
           <div class="col-lg-12"></div>
         </div>
         <div class="row">
-          <div class="col-lg-3">
-            <div class="">
-              <i class="fa fa-map-marker fa-2x text-danger"></i>
-              <p class="text-info">{{ summaryDate | date:'longDate'}}</p>
-              <h3 style="font-weight:100;">Locations of <span
-                  class="text-bold text-big text-danger">{{ mapData ? (mapData.length | number) : 0 }}</span>
-                <br> confirmed<br>cases.</h3>
-            </div>
-            <div style="margin-top: 50px;">
-              <h6 class="cursor-pointer text-info" (click)="scrollViewToPanelEmit.emit('datasets')">{{ 'dashboard.map.focusInstructions' | translate }}</h6>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-12">
+                <div class="">
+                  <i class="fa fa-map-marker fa-2x text-danger"></i>
+                  <p class="text-info">{{ summaryDate | date:'longDate'}}</p>
+                  <h3 style="font-weight:100;">Locations of <span
+                      class="text-bold text-big text-danger">{{ mapData ? (mapData.length | number) : 0 }}</span>
+                    <br> confirmed<br>cases.</h3>
+                </div>
+              </div>
+              <div class="col-12 p-0">
+                <div class="table-responsive m-t-20 mbm-md-3" style="font-size: 0.7em; max-height: 400px;">
+                  <table class="table nowrap stylish-table">
+                    <thead>
+                      <tr>
+                        <th>{{ 'dashboard.map.residences.columns.residence' | translate }}</th>
+                        <th>{{ 'dashboard.map.residences.columns.total' | translate }}</th>
+                        <th>{{ 'dashboard.map.residences.columns.percentage' | translate }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let r of residences">
+                        <td>
+                          <span class="country-name">{{ r.residence }}</span>
+                        </td>
+                        <td>{{ r.value | number }}</td>
+                        <td>
+                          <ngb-progressbar [showValue]="false" [type]="getPercentBarType(r.percent)" [value]="r.percent"></ngb-progressbar> {{ r.percent | number:'1.0-0' }}%
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-9">
+          <div class="col-lg-6">
             <div class="map-container">
               <div class="map-frame">
                 <div id="map">
