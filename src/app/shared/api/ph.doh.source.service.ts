@@ -35,4 +35,11 @@ export class PhDohSourceService extends HttpService<IPhDohNCov> {
       { observe: 'response' }
     );
   }
+
+  getResidenceData(): Observable<HttpResponse<IPhDohNCov>> {
+    return this._http.get<IPhDohNCov>(
+      `${this.resourceUrl}PH_masterlist/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&groupByFieldsForStatistics=residence&orderByFields=value%20desc&outStatistics=%5B%7B%22statisticType%22%3A%22count%22%2C%22onStatisticField%22%3A%22FID%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&outSR=102100&cacheHint=true`,
+      { observe: 'response' }
+    );
+  }
 }

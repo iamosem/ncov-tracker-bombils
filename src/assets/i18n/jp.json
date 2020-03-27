@@ -707,6 +707,13 @@
         }
       },
       "map": {
+        "residences": {
+            "columns": {
+                "residence": "住居",
+                "total": "合計",
+                "percentage": "%"
+            }
+        },
         "focusInstructions": "特定の場所に焦点を当てるには、以下の施設をクリックしてください。"
       }
     }

@@ -707,6 +707,13 @@
         }
       },
       "map": {
+        "residences": {
+            "columns": {
+                "residence": "Residenz",
+                "total": "Insgesamt",
+                "percentage": "%"
+            }
+        },
         "focusInstructions": "Klicken Sie auf eine Einrichtung unten, um sich auf einen bestimmten Ort zu konzentrieren."
       }
     }
