@@ -32,9 +32,9 @@
                         <td>
                           <span class="country-name">{{ r.residence }}</span>
                         </td>
-                        <td>{{ r.value | number }}</td>
-                        <td>
-                          <ngb-progressbar [showValue]="false" [type]="getPercentBarType(r.percent)" [value]="r.percent"></ngb-progressbar> {{ r.percent | number:'1.0-0' }}%
+                        <td>{{ r.value | number:'1.0-2' }}</td>
+                        <td style="min-width:70px;">
+                          <ngb-progressbar [showValue]="false" [type]="getPercentBarType(r.percent)" [value]="r.percent"></ngb-progressbar> {{ r.percent | number:'1.0-2' }} %
                         </td>
                       </tr>
                     </tbody>
