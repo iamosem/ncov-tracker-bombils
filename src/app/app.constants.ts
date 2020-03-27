@@ -15,6 +15,6 @@ export const MAPS_TILE_LAYER_CARTOCDN_LIGHT_ATTR= '&copy; <a href="http://www.op
 export const MAPS_TILE_LAYER_CARTOCDN_DARKURL = 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png';
 export const MAPS_TILE_LAYER_CARTOCDN_DARK_ATTR= '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
 
-export const MAPS_PH_CENTER_COOR = [11.449169, 123.439913];
+export const MAPS_PH_CENTER_COOR = [12.253347, 122.407395];
 export const MAPS_PH_MIN_ZOOM_LEVEL = 5;
 export const MAPS_PH_FOCUS_ZOOM_LEVEL = 16;

@@ -18,6 +18,7 @@ export class DashboardPhPageComponent {
   confirmedData: IFeatures[] = null;
   summaryData: IFeatures[] = null;
   masterlist: IFeatures[] = null;
+  residenceData: IFeatures[] = null;
 
   focusMarker = null;
 
@@ -33,6 +34,7 @@ export class DashboardPhPageComponent {
     this.getConfirmed();
     this.getSummary();
     this.getMasterlist();
+    this.getResidenceData();
   }
 
   private getConfirmed() {
@@ -64,6 +66,18 @@ export class DashboardPhPageComponent {
       (res: any) => {
         if (!res.body) { return; }
         this.masterlist = res.body.features;
+      },
+      (res: HttpErrorResponse) => {
+        this.onError(res.message);
+      }
+    );
+  }
+
+  private getResidenceData() {
+    this.service.getResidenceData().subscribe(
+      (res: any) => {
+        if (!res.body) { return; }
+        this.residenceData = res.body.features;
       },
       (res: HttpErrorResponse) => {
         this.onError(res.message);

@@ -707,6 +707,13 @@
         }
       },
       "map": {
+        "residences": {
+            "columns": {
+                "residence": "Paninirahan",
+                "total": "Kabuuan",
+                "percentage": "%"
+            }
+        },
         "focusInstructions": "Mag-click sa isang pasilidad sa ibaba upang tumuon sa isang tukoy na lokasyon."
       }
     }

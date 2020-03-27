@@ -30,9 +30,11 @@ L.Icon.Default.mergeOptions({
 export class MapPhComponent extends ParentComponent implements OnChanges, AfterViewInit {
 
   @Input() mapData: IFeatures[] = null;
+  @Input() residenceData: IFeatures[] = null;
   @Input() focusMarker = null;
 
   map = null;
+  residences = null;
 
   private maleIcon = new L.Icon.Default({
     iconRetinaUrl: 'assets/images/blue-marker-2x.png',
@@ -57,7 +59,7 @@ export class MapPhComponent extends ParentComponent implements OnChanges, AfterV
       };
       return container;
     },
-    onRemove: (map) => {}
+    onRemove: (map) => { }
   });
 
   summaryDate = null;
@@ -77,6 +79,10 @@ export class MapPhComponent extends ParentComponent implements OnChanges, AfterV
     if ('mapData' in changes && this.mapData) {
       this.plotMapData();
       this.getSummaryDate();
+    }
+
+    if ('residenceData' in changes && this.mapData) {
+      this.prepareResidenceData();
     }
   }
 
@@ -192,6 +198,22 @@ export class MapPhComponent extends ParentComponent implements OnChanges, AfterV
 
   public recenterMap() {
     this.map.setView(MAPS_PH_CENTER_COOR, MAPS_PH_MIN_ZOOM_LEVEL);
+  }
+
+  private prepareResidenceData() {
+    const data = this.residenceData.map(r => r.attributes);
+    const totalValue = data.reduce((total, curr) => total + curr.value, 0);
+    this.residences = data.map(d => Object.assign({}, ...d, { percent: (d.value / totalValue) * 100 }));
+  }
+
+  public getPercentBarType(value: number) {
+    if (value < 6) {
+      return 'success';
+    } else if (value < 21) {
+      return 'warning';
+    } else {
+      return 'danger';
+    }
   }
 
 }
