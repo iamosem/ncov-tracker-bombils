@@ -20,6 +20,10 @@ export class DashboardPhPageComponent {
   masterlist: IFeatures[] = null;
   residenceData: IFeatures[] = null;
 
+  testing = 0;
+  pum = 0;
+  pui = 0;
+
   focusMarker = null;
 
   constructor(private service: PhDohSourceService) {
@@ -33,6 +37,9 @@ export class DashboardPhPageComponent {
   public updateAll() {
     this.getConfirmed();
     this.getSummary();
+    this.getOnTesting();
+    this.getPum();
+    this.getPui();
     this.getMasterlist();
     this.getResidenceData();
   }
@@ -54,6 +61,42 @@ export class DashboardPhPageComponent {
       (res: any) => {
         if (!res.body) { return; }
         this.summaryData = res.body.features;
+      },
+      (res: HttpErrorResponse) => {
+        this.onError(res.message);
+      }
+    );
+  }
+
+  private getOnTesting() {
+    this.service.getOnTesting().subscribe(
+      (res: any) => {
+        if (!res.body) { return; }
+        this.testing = res.body.features[0].attributes.value;
+      },
+      (res: HttpErrorResponse) => {
+        this.onError(res.message);
+      }
+    );
+  }
+
+  private getPum() {
+    this.service.getPum().subscribe(
+      (res: any) => {
+        if (!res.body) { return; }
+        this.pum = res.body.features[0].attributes.value;
+      },
+      (res: HttpErrorResponse) => {
+        this.onError(res.message);
+      }
+    );
+  }
+
+  private getPui() {
+    this.service.getPui().subscribe(
+      (res: any) => {
+        if (!res.body) { return; }
+        this.pui = res.body.features[0].attributes.value;
       },
       (res: HttpErrorResponse) => {
         this.onError(res.message);

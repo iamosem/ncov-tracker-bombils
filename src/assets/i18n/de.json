@@ -659,7 +659,10 @@
         "confirmed": "Bestätigt",
         "admitted": "Verwiriefert",
         "deaths": "Todesfälle",
-        "recovered": "Wiederhergestellt"
+        "recovered": "Wiederhergestellt",
+        "testing": "Testing",
+        "pum": "PUM",
+        "pui": "PUI"
       },
       "statistics": {
         "title": "Statistiken",

@@ -659,7 +659,10 @@
         "confirmed": "Confirmed",
         "admitted": "Admitted",
         "deaths": "Deaths",
-        "recovered": "Recovered"
+        "recovered": "Recovered",
+        "testing": "Testing",
+        "pum": "PUM",
+        "pui": "PUI"
       },
       "statistics": {
         "title": "Statistics",
