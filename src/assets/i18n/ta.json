@@ -649,10 +649,13 @@
       "summary": {
         "title": {
           "common": "Buod",
-          "ph": "Buod para sa PH"
+          "ph": "Buod para sa Pilipinas"
         },
         "asOf": "Updated as of",
         "update": "I-update ang Lahat",
+        "gotoStats": "Stats",
+        "gotoMap": "Mapa",
+        "gotoDatasets": "Datos",
         "confirmed": "Nakumpirma",
         "admitted": "Admitted",
         "deaths": "Pumanaw",
@@ -665,12 +668,14 @@
           "days": "araw"
         },
         "confirmed": "Nakumpirma",
+        "admitted": "Admitted",
         "deaths": "Pumanaw",
         "recovered": "Gumaling"
       },
       "status": {
         "title": "Estado",
         "confirmed": "Nakumpirma",
+        "admitted": "Admitted",
         "deaths": "Pumanaw",
         "recovered": "Gumaling"
       },
